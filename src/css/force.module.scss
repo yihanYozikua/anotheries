@@ -1,0 +1,386 @@
+@import './main.scss';
+@import "@fontsource/zen-kaku-gothic-new";
+body {
+  --black: #111111;
+  --white: #fdfdfd;
+  --green: #22cc88;
+  --blue: #0055ff;
+  --purple: #8855ff;
+  --red: #ff0055;
+  --orange: #ee4444;
+  --yellow: #ffcc00;
+  --mustard: #ffaa00;
+
+  --background: var(--white);
+  --accent: var(--red);
+
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background);
+  color: var(--accent);
+  padding-bottom: 100px;
+  // overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+@keyframes fadein{
+  0% { opacity:0; }
+  30% { opacity:0; transform: scale(1.5);}
+  100% { opacity:1; transform: scale(1.0);}
+}
+@keyframes auto_scroll {
+  0%{
+    transform: translate(0, 0);
+  }
+  100%{
+    transform: translate(-200%, 0);
+  }
+}
+@mixin imgSaturateEffect{
+  filter: saturate(1.0);
+  transform: scale(1);
+  // transition: filter .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  &:hover{
+    // overflow-y: visible;
+    filter: saturate(1);
+    transform: scale(1.05);
+    transition: transform .3s ease-in-out !important;
+  }
+}
+
+@mixin top_up_gallery_img {
+  pointer-events: auto;
+  object-fit: cover;
+  position: relative;
+  display: flex;
+
+  transform: translate3d(0, 0, 0);
+  transition: all .6s cubic-bezier(.59,1.36,.67,.96);
+}
+
+@mixin dropAnim($height, $opacity, $delay, $duration, $position){
+  transform: translateY($height);
+  opacity: $opacity;
+  transition-delay: $delay;
+  transition-duration: $duration;
+  left: $position;
+}
+
+.top_up_gallery_img_1{
+  width: 16.97rem;
+  height: 16.97rem;
+  z-index: 5;
+  opacity: 0.9;
+  margin-top: 6rem;
+  animation: fadein 1.0s ease-in-out;
+  @include sm(){
+    margin-top: 6rem
+  }
+  @include md(){
+    margin-top: 27vh;
+  }
+  @include lg(){
+    margin-top: 6rem;
+  }
+
+  @include imgSaturateEffect;
+  @include top_up_gallery_img;
+
+}
+.top_up_gallery_img_1_drop_middle{
+  @extend .top_up_gallery_img_1;
+  @include dropAnim(110vh, 0.2, .1s, 1.5s, unset);
+}
+.top_up_gallery_img_1_drop_bottom{
+  @extend .top_up_gallery_img_1_drop_middle;
+  @include dropAnim(190vh, 1, .1s, 2s, 10vw);
+  position: absolute;
+}
+
+
+
+.top_up_gallery_img_2{
+  width: 19.51rem;
+  height: 14.63rem;
+  margin-left: 2.2rem;
+  margin-right: -3rem;
+  z-index: 4;
+  margin-top: 7.2rem;
+  animation: fadein .8s ease-in-out;
+  @include sm(){
+    margin-top: 7.2rem
+  }
+  @include md(){
+    margin-top: calc(7.2rem + 19.5vh);
+  }
+  @include lg(){
+    margin-top: 7.2rem;
+  }
+  
+  @include imgSaturateEffect;
+  @include top_up_gallery_img;
+}
+.top_up_gallery_img_2_drop_middle{
+  @extend .top_up_gallery_img_2;
+  @include dropAnim(110vh, 0.25, .7s, 1.5s, unset);
+}
+.top_up_gallery_img_2_drop_bottom{
+  @extend .top_up_gallery_img_2_drop_middle;
+  @include dropAnim(340vh, 1, .7s, 2s, 80vw);
+  position: absolute;
+}
+
+
+.top_up_gallery_img_3{
+  width: 17.21rem;
+  height: 20.53rem;
+  z-index: 3;
+  opacity: 0.9;
+  margin-top: 4rem;
+  animation: fadein .9s ease-in-out;
+  @include sm(){
+    margin-top: 4rem
+  }
+  @include md(){
+    margin-top: calc(4rem + 20vh);
+  }
+  @include lg(){
+    margin-top: 4rem;
+  }
+
+  @include imgSaturateEffect;
+  @include top_up_gallery_img;
+}
+.top_up_gallery_img_3_drop_middle{
+  @extend .top_up_gallery_img_3;
+  @include dropAnim(110vh, 0.25, .4s, 1.5s, unset);
+
+}
+.top_up_gallery_img_3_drop_bottom{
+  @extend .top_up_gallery_img_3_drop_middle;
+  @include dropAnim(355vh, 1, .4s, 3s, unset);
+  position: absolute;
+}
+
+
+.top_up_gallery_img_4{
+  width: 6.04rem;
+  height: 11.21rem;
+  margin-left: -1rem;
+  z-index: 3;
+  margin-top: 9rem;
+  animation: fadein .7s ease-in-out;
+  @include sm(){
+    margin-top: 9rem
+  }
+  @include md(){
+    margin-top: calc(9rem + 20vh);
+  }
+  @include lg(){
+    margin-top: 9rem;
+  }
+
+  @include imgSaturateEffect;
+  @include top_up_gallery_img;
+}
+.top_up_gallery_img_4_drop_middle{
+  @extend .top_up_gallery_img_4;
+  @include dropAnim(110vh, 0.25, .8s, 1.5s, unset);
+}
+.top_up_gallery_img_4_drop_bottom{
+  @extend .top_up_gallery_img_4_drop_middle;
+  @include dropAnim(190vh, 1, .8s, 1s, 86vw);
+  position: absolute;
+}
+
+
+.top_up_gallery_img_5{
+  width: 16.97rem;
+  height: 16.97rem;
+  margin-left: -0.5rem;
+  opacity: 0.9;
+  margin-right: 2.3rem;
+  z-index: 2;
+  margin-top: 6.25rem;
+  animation: fadein .8s ease-in-out;
+  @include sm(){
+    margin-top: 6.25rem
+  }
+  @include md(){
+    margin-top: calc(6.25rem + 20vh);
+  }
+  @include lg(){
+    margin-top: 6.25rem;
+  }
+
+  @include imgSaturateEffect;
+  @include top_up_gallery_img;
+}
+.top_up_gallery_img_5_drop_middle{
+  @extend .top_up_gallery_img_5;
+  @include dropAnim(110vh, 0.25, .15s, 1.5s, unset);
+}
+.top_up_gallery_img_5_drop_bottom{
+  @extend .top_up_gallery_img_5_drop_middle;
+  @include dropAnim(400vh, 1, .15s, 2s, 90vw);
+  position: absolute;
+}
+
+
+
+.top_up_gallery_img_6{
+  width: 14.63rem;
+  height: 24.39rem;
+  z-index: 3;
+  margin-top: 2.5rem;
+  animation: fadein .5s ease-in-out;
+  @include sm(){
+    margin-top: 2.5rem
+  }
+  @include md(){
+    margin-top: calc(2.5rem + 20vh);
+  }
+  @include lg(){
+    margin-top: 2.5rem;
+  }
+
+  @include imgSaturateEffect;
+  @include top_up_gallery_img;
+}
+.top_up_gallery_img_6_drop_middle{
+  @extend .top_up_gallery_img_6;
+  @include dropAnim(110vh, 0.25, .6s, 1.5s, unset);
+}
+.top_up_gallery_img_6_drop_bottom{
+  @extend .top_up_gallery_img_6_drop_middle;
+  @include dropAnim(360vh, 1, .6s, 1s, 25vw);
+  position: absolute;
+}
+
+
+.top_up_gallery_img_7{
+  width: 16.58rem;
+  height: 16.58rem;
+  margin-left: -2.35rem;
+  margin-right: 2.15rem;
+  z-index: 4;
+  margin-top: 7rem;
+  animation: fadein .6s ease-in-out;
+  @include sm(){
+    margin-top: 7rem
+  }
+  @include md(){
+    margin-top: calc(7rem + 20vh);
+  }
+  @include lg(){
+    margin-top: 7rem;
+  }
+
+  @include imgSaturateEffect;
+  @include top_up_gallery_img;
+}
+.top_up_gallery_img_7_drop_middle{
+  @extend .top_up_gallery_img_7;
+  @include dropAnim(110vh, 0.25, .25s, 1.5s, unset);
+}
+.top_up_gallery_img_7_drop_bottom{
+  @extend .top_up_gallery_img_7_drop_middle;
+  @include dropAnim(230vh, 1, .25s, 2s, 37vw);
+  position: absolute;
+}
+
+.top_up_gallery_img_8{
+  width: 13.95rem;
+  height: 19.51rem;
+  margin-right: 1.25rem;
+  z-index:3;
+  opacity: 0.9;
+  margin-top: 5.5rem;
+  animation: fadein 1.2s ease-in-out;
+  @include sm(){
+    margin-top: 5.5rem
+  }
+  @include md(){
+    margin-top: calc(5.5rem + 20vh);
+  }
+  @include lg(){
+    margin-top: 5.5rem;
+  }
+
+  @include imgSaturateEffect;
+  @include top_up_gallery_img;
+}
+.top_up_gallery_img_8_drop_middle{
+  @extend .top_up_gallery_img_8;
+  @include dropAnim(110vh, 0.25, .7s, 1.5s, unset);
+
+}
+.top_up_gallery_img_8_drop_bottom{
+  @extend .top_up_gallery_img_8_drop_middle;
+  @include dropAnim(240vh, 1, .7s, 2s, 80vw);
+  position: absolute;
+}
+
+.top_up_gallery_img_9{
+  width: 21.95rem;
+  height: 14.04rem;
+  margin-right: -2rem;
+  margin-top: 8.5rem;
+  z-index: 4;
+  animation: fadein .8s ease-in-out;
+  @include sm(){
+    margin-top: 8.5rem
+  }
+  @include md(){
+    margin-top: calc(8.5rem + 20vh);
+  }
+  @include lg(){
+    margin-top: 8.5rem;
+  }
+
+  @include imgSaturateEffect;
+  @include top_up_gallery_img;
+}
+.top_up_gallery_img_9_drop_middle{
+  @extend .top_up_gallery_img_9;
+  @include dropAnim(110vh, 0.25, .3s, 1.5s, unset);
+}
+.top_up_gallery_img_9_drop_bottom{
+  @extend .top_up_gallery_img_9_drop_middle;
+  @include dropAnim(300vh, 1, .3s, 2s, 18vw);
+  position: absolute;
+}
+
+.top_up_gallery_img_10{
+  width: 14.14rem;
+  height: 20.48rem;
+  margin-top: 5rem;
+  z-index: 3;
+  animation: fadein 1.0s ease-in-out;
+  @include sm(){
+    margin-top: 5rem
+  }
+  @include md(){
+    margin-top: calc(5rem + 20vh);
+  }
+  @include lg(){
+    margin-top: 5rem;
+  }
+
+  @include imgSaturateEffect;
+  @include top_up_gallery_img;
+}
+.top_up_gallery_img_10_drop_middle{
+  @extend .top_up_gallery_img_10;
+  @include dropAnim(110vh, 0.25, .1s, 1.5s, unset);
+}
+.top_up_gallery_img_10_drop_bottom{
+  @extend .top_up_gallery_img_10_drop_middle;
+  @include dropAnim(300vh, 1, .1s, 2s, 48vw);
+  position: absolute;
+}

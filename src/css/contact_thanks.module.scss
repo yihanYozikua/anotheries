@@ -1,0 +1,125 @@
+@import './main.scss';
+@import "@fontsource/zen-kaku-gothic-new";
+// $about-height: 24rem;
+$contact-bg-color: #ECE2E4;
+$contact-input-color: #B3B3BE;
+$contact-input-after-fill-color: rgb(97, 97, 97);
+$contact-thanks-text-color: #383C47;
+$contact-thanks-dialogue-bgc: #EBDBD1;
+
+*{
+  color: $contact-thanks-text-color;
+}
+
+// nav{
+//   width: 100vw;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   padding: 1.8rem 0 !important;
+//   z-index: 10;
+// }
+a{
+  text-decoration: none !important;
+  margin: 0 0.8rem;
+  letter-spacing: 0.1rem;
+  color: $color-text;
+  // @include buttonHoverEffect;
+}
+
+#contact_thanks{
+  background-color: $contact-bg-color;
+  color: $color-text;
+  padding-top: 5rem;
+
+  .nav_items{
+    @include buttonHoverEffect;
+  }
+
+  .contact_thanks_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .contact_thanks_title{
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+    margin: 7rem 0;
+  }
+  .contact_thanks_descriptions_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 50%;
+    margin-bottom: 8rem;
+
+    .contact_thanks_descriptions_sep_prop{
+      font-size: 0.7rem;
+      color: $contact-thanks-text-color;
+      font-weight: 400;
+      line-height: 1.7rem;
+      text-align: left;
+    }
+  }
+  .contact_thanks_img_area_container{
+
+    .contact_thanks_img_prop{
+      object-fit: cover;
+      width: 20rem;
+      height: 20rem;
+
+    }
+    .contact_thanks_img_description_area{
+      margin-top: 1.5rem;
+      margin-bottom: 2.5rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+      .contact_thanks_img_description_sep_prop{
+        margin: 0 0.5rem;
+      }
+    }
+  }
+
+
+  .dialogue_container{
+    display: none;
+    flex-direction: column;
+    text-align: left;
+    font-size: 0.7rem;
+    font-weight: 300;
+    width: 60vw;
+    margin-bottom: 8rem;
+
+    .dialogue_container_up{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      margin: 0.75rem 0;
+      .dialogue_container_up_prop{
+        width: 50%;
+        overflow-wrap: break-word;
+        padding: 1rem 1rem;
+        background-color: $contact-thanks-dialogue-bgc;
+        line-height: 1.5rem;
+      }
+    }
+    .dialogue_container_down{
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 100%;
+      margin: 0.75rem 0;
+
+      .dialogue_container_down_prop{
+        width: 65%;
+        overflow-wrap: break-word;
+        padding: 1rem 1rem;
+        background-color: $contact-thanks-dialogue-bgc;
+        line-height: 1.5rem;
+      }
+    }
+  }
+}

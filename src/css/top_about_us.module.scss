@@ -1,0 +1,68 @@
+@import './main.scss';
+@import "@fontsource/zen-kaku-gothic-new";
+$top-about-us-height: 24rem;
+$top-get-in-touch-text-color: #383C47;
+
+#top_about_us{
+  display: flex;
+  align-items: center;
+  background-color: $color-top-gray;
+  width: 100vw;
+  height: $top-about-us-height;
+  font-family: 'Poppins', 'Lato', 'Yeseva One', 'Noto Sans JP', sans-serif, cursive !important;
+  font-weight: 500!important;
+  font-style: italic;
+  font-size: 3rem;
+  border-bottom: 1px solid white;
+  transition: background-image .5s ease-in-out;
+
+  a{
+    color: white;
+    margin: 0 0 !important;
+    width: 100vw;
+    height: $top-about-us-height;
+  }
+  .text_prop{
+    z-index: 12;
+    color: $top-get-in-touch-text-color;
+    padding: 0 3rem;
+    
+  }
+  .btn{
+    color:#262626;
+    padding:0.5em 1em;
+    font-size:1em;
+    // border-top: #fff 1px solid;
+    // border-bottom: #fff 1px solid;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    position:absolute;
+    z-index: 10;
+    height: $top-about-us-height;
+    width: 100vw;
+    margin: 0 -3rem;
+  }
+
+  .btn:hover {
+    color: whitesmoke;
+  }
+
+  // .btn:before {
+  //   content: "";
+  //   position: absolute;
+  //   background-image: url(../static/img/2017_08_shonan/shonan_2017_08_1.JPG);
+  //   background-size: cover;
+  //   background-position: center center;
+  //   filter: opacity(50%);
+  //   bottom: 100%;
+  //   left: 0;
+  //   right: 0;
+  //   top: 0;
+  //   z-index: -1;
+  //   -webkit-transition: bottom 0.5s ease-in-out;
+  // }
+
+  .btn:hover:before {
+    bottom: 0;
+  }
+}

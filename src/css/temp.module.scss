@@ -1,0 +1,64 @@
+@import './main.scss';
+@import "@fontsource/zen-kaku-gothic-new";
+
+#temp{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(77, 79, 86);
+
+  .declaration_container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(56, 60, 71, 0.8);
+    .declaration_contents_container{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 11;
+      @include sm(){
+        width: 80%;
+      }
+      @include md(){
+
+      }
+      @include lg(){
+        
+      }
+      .declaration_prop{
+        font-size: 1rem;
+        color: white;
+      }
+    }
+    
+  }
+  img{
+    width: 100%;
+    height: 30%;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+  }
+
+  
+  @include sm(){
+    display: flex;
+  }
+  @include md(){
+    display: flex;
+  }
+  @include lg(){
+    display: none;
+  }
+}

@@ -1,0 +1,157 @@
+@import './main.scss';
+@import "@fontsource/zen-kaku-gothic-new";
+
+* {
+  cursor: none;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+}
+
+#cursor {
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  background-color: white;
+  opacity: .3;
+  transition: all 200ms ease-out;
+  position: fixed;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+  transform: translate(calc(-50% + 15px), -50%);
+  z-index: 210;
+  @include sm(){
+    display: none;
+  }
+  @include md(){
+    display: none;
+  }
+  @include lg(){
+    display: unset;
+  }
+}
+
+#cursor2 {
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background-color: white;
+  opacity: .3;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: width .3s, height .3s, opacity .3s ease-in-out;
+  z-index: 210;
+  @include sm(){
+    display: none;
+  }
+  @include md(){
+    display: none;
+  }
+  @include lg(){
+    display: unset;
+  }
+}
+
+//============ Cursor: <a> ============
+.cursor_hover_a {
+  // background-color: black !important;
+  transition: all .3s ease-in-out;
+  opacity: 0.5;
+  width: 50px !important;
+  height: 50px !important;
+}
+
+.cursorinnerhover_a {
+  // background-color: black !important;
+  transition: all .3s ease-in-out;
+  opacity: .5;
+  width: 30px !important;
+  height: 30px !important;
+}
+
+//============ Cursor: Left Right Arrow ============
+.cursor_hover_left_right_arrow{
+  transition: all .3s ease-in-out;
+  opacity: .3;
+  width: 100px !important;
+  height: 100px !important;
+  background-color: black !important;
+}
+.cursor_hover_inner_left_right_arrow{
+  transition: all .3s ease-in-out;
+  opacity: .9 !important;
+  width: 80px !important;
+  height: 80px !important;
+  background-color: rgba(56, 60, 71, 0.9) !important;
+  padding-top: 26px;
+
+  &::before{
+    content: url('../static/cursor/cursor_left_right_arrow_only.svg');
+    display: inline-block;
+    vertical-align: middle;
+    display: inline;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -25px);
+  }
+}
+
+//============ Cursor: View ============
+.cursor_hover_view{
+  transition: all .3s ease-in-out;
+  opacity: .7 !important;
+  width: 120px !important;
+  height: 120px !important;
+  background-color: rgba(56, 60, 71, 0.7) !important;
+}
+.cursor_hover_inner_view{
+  transition: all .3s ease-in-out;
+  opacity: .7 !important;
+  width: 96px !important;
+  height: 96px !important;
+  background-color: rgba(56, 60, 71, 0.7) !important;
+  padding-top: 35px;
+
+  &::before{
+    content: 'View';
+    font-style: italic;
+    vertical-align: middle;
+    display: inline;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -25px);
+    color: white;
+  }
+}
+
+//============ Cursor: Click ============
+.cursor_hover_click{
+  transition: all .3s ease-in-out;
+  width: 140px !important;
+  height: 140px !important;
+  background-color: black !important;
+}
+.cursor_hover_inner_click{
+  transition: all .3s ease-in-out;
+  opacity: .9 !important;
+  width: 120px !important;
+  height: 120px !important;
+  background-color: rgba(56, 60, 71, 0.9) !important;
+  padding-top: 45px;
+
+  &::before{
+    content: 'Click';
+    font-style: italic;
+    color: white;
+    display: inline-block;
+    vertical-align: middle;
+    display: inline;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -25px);
+  }
+}

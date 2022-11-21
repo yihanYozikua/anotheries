@@ -1,0 +1,72 @@
+@import './main.scss';
+@import "@fontsource/zen-kaku-gothic-new";
+$top-view-all-locations-height: 18rem;
+
+#top_view_all_locations{
+  display: flex;
+  align-items: center;
+  background-color: $color-top-gray;
+  width: 100vw;
+  height: $top-view-all-locations-height;
+  font-family: 'Poppins', 'Lato', 'Yeseva One', 'Noto Sans JP', sans-serif, cursive !important;
+  font-weight: 400!important;
+  font-style: italic;
+  font-size: 5rem;
+  border-bottom: 1px solid white;
+
+  max-width: 100%;
+  position: relative;
+  overflow-x: hidden;
+
+  margin-top: -2rem;
+
+  a{
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    margin: 0 0 !important;
+    // height: $top-view-all-locations-height;
+    // @include buttonHoverEffect;
+  }
+  .track{
+    position: absolute;
+    white-space: nowrap;
+    will-change: transform;
+    z-index: 12;
+    background-color: transparent;
+  }
+
+  .btn{
+    color:#262626;
+    font-size:1em;
+    border-bottom: #fff 1px solid;
+    -webkit-text-fill-color:transparent;
+    position:absolute;
+    z-index: 100;
+    height: $top-view-all-locations-height;
+    width: 100%;
+  }
+
+  .btn:hover {
+    // color: whitesmoke;
+  }
+
+  // .btn:before {
+  //   content: "";
+  //   position: absolute;
+  //   background-image: url(../static/img/2020_03_BookAndBedTokyoIkeBuKuRo/BookAndBedTokyoIkeBuKuRo_2020_03_1.jpg);
+  //   background-size: cover;
+  //   background-position: center center;
+  //   filter: opacity(50%);
+  //   bottom: 100%;
+  //   left: 0;
+  //   right: 0;
+  //   top: 0;
+  //   z-index: -1;
+  //   -webkit-transition: bottom 0.5s ease-in-out;
+  // }
+
+  // .btn:hover:before {
+  //   bottom: 0;
+  // }
+}

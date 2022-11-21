@@ -1,0 +1,205 @@
+@import './main.scss';
+@import "@fontsource/zen-kaku-gothic-new";
+// $about-height: 24rem;
+$contact-bg-color: #ECE2E4;
+$contact-input-color: #B3B3BE;
+$contact-input-after-fill-color: rgb(97, 97, 97);
+
+// nav{
+//   width: 100vw;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   padding: 1.8rem 0 !important;
+//   z-index: 10;
+// }
+a{
+  text-decoration: none !important;
+  margin: 0 0.8rem;
+  letter-spacing: 0.1rem;
+  color: $color-text;
+  // @include buttonHoverEffect;
+}
+@keyframes fadein{
+  0% { opacity:0; }
+  30% { opacity:0;}
+  100% { opacity:1;}
+}
+
+#contact{
+  background-color: $contact-bg-color;
+  color: $color-text;
+  padding-top: 5rem;
+
+  .nav_items{
+    @include buttonHoverEffect;
+  }
+  
+  .contact_container{
+
+  }
+
+  .banner_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    // height: 200vh;
+    padding: 1.5rem 0;
+    .banner_img{
+      object-fit: cover;
+      position: relative;
+      width: 10rem;
+      height: 10rem;
+      margin-bottom: 3rem;
+      animation: fadein 1.0s ease-in-out;
+    }
+  }
+
+  .description_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+
+    .description_left{
+      display: flex;
+      flex-direction: column;
+      width: 28.4rem;
+      margin: 0 5.5rem;
+      .description_left_paragraph{
+        font-family: 'Zen Kaku Gothic New', 'Poppins', 'Lato', 'Yeseva One', 'Noto Sans JP', sans-serif, cursive !important;
+        font-weight: 400;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        font-size: 0.8rem;
+        line-height: 1.8rem;
+        text-align: left;
+        margin: 1.5rem 0;
+      }
+    }
+    .description_right{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      text-align: left;
+      margin: 0 5.5rem;
+      padding: 3rem 0;
+      .description_sep_container{
+        display: flex;
+        flex-direction: column;
+        margin: 2rem 0;
+        line-height: 1.8rem;
+        .description_right_title{
+          display: flex;
+          flex-direction: column;
+          font-size: 0.8rem;
+        }
+        .description_right_button_container{
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+        }
+        .arrow_right_short_prop{
+          width: 1.4rem;
+          height: 0.7rem;
+        }
+        .arrow_down_short_prop{
+          width: 0.7rem;
+          height: 1.4rem;
+        }
+        .description_right_url{
+          display: flex !important;
+          flex-direction: column !important;
+          font-size: 1.2rem !important;
+          color: $contact-input-color !important;
+          text-decoration: underline !important;
+          &:hover{
+            // cursor: pointer !important;
+            color: rgb(97, 97, 97) !important;
+            transition: all .3s ease-in-out !important;
+          }
+        }
+        .description_right_email{
+          @extend .description_right_url;
+          // margin: 0 0 !important;
+          margin-left: 0 !important;
+          margin-right: 1rem !important;
+        }
+        .description_right_scroll_down{
+          @extend .description_right_url;
+          margin-left: 0 !important;
+          margin-right: 1rem !important;
+        }
+        
+      }
+    }
+  }
+
+  #contactForm{
+    position: relative;
+
+  }
+  .input_form_element_container{
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    ::placeholder{
+      color: $contact-input-color;
+    }
+  }
+
+  .double_check_container{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .double_check_prop{
+    // @extend .description_right_url;
+    display: flex !important;
+    flex-direction: column !important;
+    font-size: 2rem !important;
+    color: $contact-input-color !important;
+    text-decoration: underline !important;
+    margin-right: 1rem !important;
+    margin-left: 0 !important;
+    &:hover{
+      // cursor: pointer !important;
+      color: rgb(97, 97, 97) !important;
+      transition: all .3s ease-in-out !important;
+    }
+  }
+
+
+  form{
+    margin-top: 7rem;
+  }
+
+  label{
+    font-size: 0.8rem;
+  }
+  input[type=text], select{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid gray;
+    font-size: 3rem;
+    color: $contact-input-after-fill-color;
+  }
+  textarea{
+    border: 0;
+    border-bottom: 1px solid gray;
+    background-color: transparent;
+    font-size: 3rem;
+    width: 100%;
+    // height: 4rem;
+    color: $contact-input-after-fill-color;
+  }
+}

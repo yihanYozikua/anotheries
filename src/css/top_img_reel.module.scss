@@ -1,0 +1,53 @@
+@import './main.scss';
+$top-up-height: 100vh;
+$color_gray: #B3B3BE;
+
+@keyframes fadein {
+  from { opacity: 0; transform: scale(1.5);}
+  to { opacity: 1; transform: scale(1.0);}
+}
+
+#topImgReel{
+  display: flex;
+  position: absolute;
+  // z-index: 100;
+  width: 100vw;
+  margin: 5rem 0;
+
+  #topScroll{
+    height: 500vh;
+  }
+
+  .top_up_gallery_container{
+    display: flex;
+    flex: row !important;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+    overflow-x: scroll;
+    width: 100%;
+    // max-width: 200%;
+    &:hover{
+      // animation-play-state: paused;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .top_up_gallery_container_animate_drop{
+    @extend .top_up_gallery_container;
+  }
+  .top_up_gallery_container_animate_lock{
+    @extend .top_up_gallery_container;
+    // overflow-x: hidden;
+  }
+
+
+  @keyframes auto_scroll {
+    100%{
+      transform: translateX(-146%);
+    }
+  }
+}

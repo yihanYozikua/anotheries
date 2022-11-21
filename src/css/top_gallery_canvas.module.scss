@@ -1,0 +1,261 @@
+@import './main.scss';
+@import "@fontsource/zen-kaku-gothic-new";
+
+@keyframes fadein{
+  0% { opacity:0; }
+  30% { opacity:0; transform: scale(1.5);}
+  100% { opacity:1; transform: scale(1.0);}
+}
+
+@keyframes fadein_reel{
+  0% { opacity:0; }
+  70% { opacity:0; transform: scale(1.5);}
+  100% { opacity:1; transform: scale(1.0);}
+}
+
+#top_gallery_container{
+  margin: 0;
+  padding: 0;
+  overflow: hidden !important;
+  height: 100%;
+  
+
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  a{
+    margin: 0 0 !important;
+    z-index: 200 !important;
+  }
+
+  #scroll_container{
+    width: 100vw;
+    // height: 145rem;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    #large_container{
+      width: 140rem;
+      // height: 180rem;
+      overflow: scroll;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      #container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-top: 1rem;
+        overflow: scroll;
+        
+        .img_row_container{
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          width: 100%;
+          &:nth-child(1){
+
+            .img_container{
+              position: positive;
+              transition: transform .3s ease-in-out !important;
+              &:hover{
+                transform: scale(1.05);
+                transition: transform .3s ease-in-out !important;
+              }
+              
+              &:nth-child(1){
+                width: 19.48rem;
+                height: 19.48rem;
+                margin-left: 10rem !important;
+                margin-right: 5.44rem !important;
+                margin-top: 4rem !important;
+                animation: fadein 1s ease-in-out;
+                opacity: 0;
+              }
+              &:nth-child(2){
+                width: 13.44rem;
+                height: 13.44rem;
+                margin-left: -2rem !important;
+                margin-right: 4rem !important;
+                animation: fadein .8s ease-in-out;
+              }
+              &:nth-child(3){
+                width: 21.28rem;
+                height: 15.68rem;
+                margin-left: 2rem !important;
+                margin-right: 2.88rem !important;
+                margin-top: 2rem !important;
+                animation: fadein .5s ease-in-out;
+              }
+              &:nth-child(4){
+                width: 6.94rem;
+                height: 12.88rem !important;
+                margin-top: 3.5rem !important;
+                animation: fadein .7s ease-in-out;
+              }
+            }
+          }
+          &:nth-child(2){
+            .img_container{
+              transition: transform .3s ease-in-out !important;
+              &:hover{
+                transform: scale(1.05);
+                transition: transform .3s ease-in-out !important;
+              }
+
+              &:nth-child(1){
+                width: 20.944rem;
+                height: 10.19rem;
+                margin-right: 2rem !important;
+                margin-left: -4rem !important;
+                margin-top: 6rem !important;
+                animation: fadein .8s ease-in-out;
+              }
+              &:nth-child(2){
+                width: 14.75rem;
+                height: 21.85rem;
+                margin-right: 2rem !important;
+                margin-top: 2.5rem !important;
+                animation: fadein .9s ease-in-out;
+              }
+              &:nth-child(3){
+                width: 19.48rem;
+                height: 19.48rem;
+                margin-right: 5rem !important;
+                margin-top: -8rem !important;
+                animation: fadein .6s ease-in-out;
+              }
+              &:nth-child(4){
+                width: 13.45rem;
+                height: 22.26rem;
+                margin-left: -3rem !important;
+                margin-right: 5rem !important;
+                margin-top: -2rem !important;
+                animation: fadein .7s ease-in-out;
+              }
+              &:nth-child(5){
+                width: 19.53rem;
+                height: 27.32rem;
+                margin-left: -3rem !important;
+                margin-top: -4rem !important;
+                animation: fadein .8s ease-in-out;
+              }
+            }
+          }
+          &:nth-child(3){
+            .img_container{
+              transition: transform .3s ease-in-out !important;
+              &:hover{
+                transform: scale(1.05);
+                transition: transform .3s ease-in-out !important;
+              }
+              &:nth-child(1){
+                width: 25rem;
+                height: 15rem;
+                margin-left: 12rem !important;
+                margin-right: 3.6rem !important;
+                margin-top: 3rem !important;
+                animation: fadein .8s ease-in-out;
+              }
+              &:nth-child(2){
+                width: 16rem;
+                height: 25rem;
+                margin-right: 3.56rem !important;
+                margin-top: -10rem !important;
+                animation: fadein 1.2s ease-in-out;
+              }
+              &:nth-child(3){
+                width: 25rem;
+                height: 15rem;
+                margin-right: 3.24rem !important;
+                margin-top: 1rem !important;
+                animation: fadein 1.0s ease-in-out;
+              }
+              &:nth-child(4){
+                width: 10.1rem;
+                height: 16.29rem;
+                margin-top: 4rem !important;
+                animation: fadein .9s ease-in-out;
+              }
+            }
+          }
+          &:nth-child(4){
+            .img_container{
+              transition: transform .3s ease-in-out !important;
+              &:hover{
+                transform: scale(1.05);
+                transition: transform .3s ease-in-out !important;
+              }
+              &:nth-child(1){
+                width: 27.32rem;
+                height: 16.39rem;
+                margin-right: 2.2rem !important;
+                margin-left: 7rem !important;
+                margin-top: 2rem !important;
+                animation: fadein .6s ease-in-out;
+              }
+              &:nth-child(2){
+                width: 20.49rem;
+                height: 34.15rem;
+                margin-right: 3.2rem !important;
+                margin-top: 1rem !important;
+                animation: fadein .9s ease-in-out;
+              }
+              &:nth-child(3){
+                width: 30.05rem;
+                height: 22.54rem;
+                margin-right: 2.5rem !important;
+                margin-top: 4rem !important;
+                animation: fadein 1.0s ease-in-out;
+              }
+              &:nth-child(4){
+                width: 27.32rem;
+                height: 20.49rem;
+                margin-top: 2rem !important;
+                animation: fadein .8s ease-in-out;
+              }
+            }
+          }
+          &:nth-child(5){
+            .img_container{
+              transition: transform .3s ease-in-out !important;
+              &:hover{
+                transform: scale(1.05);
+                transition: transform .3s ease-in-out !important;
+              }
+              &:nth-child(1){
+                width: 24.11rem;
+                height: 28.75rem;
+                margin-right: 3.96rem !important;
+                margin-left: -1rem !important;
+                margin-top: -15rem !important;
+                animation: fadein .7s ease-in-out;
+              }
+              &:nth-child(2){
+                width: 25.95rem;
+                height: 19.12rem;
+                margin-right: 5rem !important;
+                margin-left: 25rem !important;
+                margin-top: -7rem !important;
+                animation: fadein .8s ease-in-out;
+              }
+              &:nth-child(3){
+                width: 19.48rem;
+                height: 19.48rem;
+                margin-top: -10rem !important;
+                animation: fadein .7s ease-in-out;
+              }
+            }
+          }
+        }
+
+        
+      }
+    }
+  }
+}

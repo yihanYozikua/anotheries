@@ -1,0 +1,82 @@
+@import './main.scss';
+@import "@fontsource/zen-kaku-gothic-new";
+$locations-index-height: 100rem;
+$location-miss-traveling-height: 24rem;
+$location-bg-color:#F1EEE6;
+
+html, body{
+  overflow-x: hidden;
+}
+
+// nav{
+//   width: 100vw;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   padding: 1.8rem 0 !important;
+//   z-index: 10;
+// }
+a{
+  text-decoration: none !important;
+  // margin: 0 0rem;
+  margin: 0 0.8rem;
+  letter-spacing: 0.1rem;
+  color: $color-text;
+  // @include buttonHoverEffect;
+}
+.gradient_text_prop{
+  background: linear-gradient(270deg, rgba(204, 203, 206, 0.65) 32.59%, #E9DDBE 61.42%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+#locations{
+  background-color: $location-bg-color;
+  color: $color-text;
+  overflow-x: hidden;
+  width: 100vw;
+
+  .nav_items{
+    @include buttonHoverEffect;
+  }
+  
+  .locations_container{
+    overflow-x: hidden;
+    width: 100vw;
+    padding-top: 5rem;
+  }
+
+  .index_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $location-bg-color;
+    // height: $locations-index-height;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  .track{
+    position: absolute;
+    white-space: nowrap;
+    will-change: transform;
+    overflow-x: hidden;
+  }
+  .auto_scroll_container{
+    display: flex;
+    align-items: center;
+    background-color: $location-bg-color;
+    width: 100vw;
+    height: $location-miss-traveling-height;
+    font-family: 'Poppins', 'Lato', 'Yeseva One', 'Noto Sans JP', sans-serif, cursive !important;
+    font-weight: 400!important;
+    font-style: italic;
+    font-size: 5rem;
+    overflow: hidden;
+    margin-top: -16rem;
+  }
+}

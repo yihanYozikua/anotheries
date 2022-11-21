@@ -1,0 +1,45 @@
+@import './main.scss';
+@import "@fontsource/zen-kaku-gothic-new";
+$footer-height: 15.65rem;
+
+#footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: $color-top-gray;
+  width: 100vw;
+  height: $footer-height;
+  font-family: 'Poppins', 'Lato', 'Yeseva One', 'Noto Sans JP', sans-serif, cursive !important;
+
+  .nav_items{
+    @include buttonHoverEffect;
+  }
+  
+  .bottom_nav_container{
+    width: 40%;
+    white-space:nowrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    // width: 40vw;
+    padding: 3rem 3rem;
+    font-weight: 400!important;
+  }
+  .privacy_policy_container{
+    width: 60%;
+    white-space:nowrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    // width: 60vw;
+    padding: 3rem 3rem;
+    font-weight: 400!important;
+    .privacy_policy_content{
+      margin: 0 0.9rem;
+      font-size: 0.7rem;
+      padding-bottom: .4rem;
+    }
+  }
+}

@@ -1,0 +1,153 @@
+@import './main.scss';
+$top-up-height: 100vh;
+$color_gray: #B3B3BE;
+$test: red;
+
+// nav{
+//   width: 100vw;
+//   display: flex;
+//   justify-content: center;
+//   align-items: flex-start;
+//   padding: 1.8rem 0 !important;
+//   z-index: 101;
+// }
+a{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-decoration: none !important;
+  margin: 0 0.8rem;
+  letter-spacing: 0.1rem;
+  color: $color-text;
+}
+.nav_items{
+  @include buttonHoverEffect;
+}
+
+Button{
+  white-space:nowrap;
+  font-size: 0.9rem !important;
+  font-style: italic;
+  font-weight: 400;
+  border-radius: 10rem !important;
+  padding: 0.05rem 2rem !important;
+  letter-spacing: 0.1rem !important;
+}
+
+body{
+  background-color: $color_gray !important;
+}
+
+
+#topUp{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: $top-up-height;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  color: $color-text;
+  // z-index: 999;
+
+  
+
+  .top_up_container{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    // overflow-x: hidden;
+    height: 100%;
+  }
+
+  
+
+  .top_up_text_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 101;
+    margin-top: 70vh;
+
+    .index_container{
+      display: flex;
+      justify-content: flex-start;
+      width: 20vw;
+      padding-left: 3.2rem;
+      @include sm(){
+        padding-left: 2rem;
+      }
+    }
+
+    .location_text_container{
+      display: flex;
+      width: 60vw;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.8rem;
+      letter-spacing: 0.1rem;
+      font-weight: 500;
+      line-height: 2.2rem;
+    }
+
+    .view_more_button_container{
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 20vw;
+      padding-right: 3.2rem;
+      @include sm(){
+        padding-right: 0;
+      }
+      .view_more_button_prop{
+        border: 1px #383C47 solid;
+        padding: .1rem 2rem;
+        border-radius: 100px;
+        font-style: italic;
+        font-size: .75rem;
+        transition: all .3s ease-in-out;
+        &:hover{
+          background-color: white;
+          transition: all .3s ease-in-out;
+          color: black;
+        }
+      }
+    }
+
+  }
+  .scroll_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1rem;
+    margin-top: 1rem;
+
+    .scroll_prop{
+      font-style: italic;
+      font-size: 1rem;
+    }
+  }
+
+
+  .progress_bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: var(--red);
+    transform-origin: 0%;
+  }
+
+}

@@ -11,7 +11,7 @@ import LocationsTemplate from '../../Template/LocationsType4'
 
 function MapleAwanda(){
   return(
-    <LocationsTemplate bannerImg={images[96]}  locationIndex={''}
+    <LocationsTemplate bannerImg={images[96]}  locationIndex={'923'}
                         imgsAll={[images[96], images[97], images[98]]}
                         imgsToShow={[images[97]]}
                         title={['幻想的景色、楽園のような空間、生い茂る緑、自然の美がありのまま。']}

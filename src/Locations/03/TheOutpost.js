@@ -11,7 +11,7 @@ import LocationsTemplate from '../../Template/LocationsType3'
 
 function TokyoTower(){
   return(
-    <LocationsTemplate bannerImg={images[99]}  locationIndex={'098'}
+    <LocationsTemplate bannerImg={images[99]}  locationIndex={'922'}
                         imgsAll={[images[99], images[100], images[101]]}
                         imgsToShow={[images[99], images[101]]}
                         title={['豪華、贅沢、南国リゾートの代表格']}

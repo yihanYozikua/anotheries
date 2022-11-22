@@ -7,7 +7,7 @@ import { MdKeyboardArrowDown } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
 
-function TopViewLocations({bg_color}){
+function TopViewLocations({bg_color, marginTopOffset}){
   // =================== Get Window Size =================
   const [ windowSize, setWindowSize ] = useState(getWindowSize());
   function getWindowSize() {
@@ -42,7 +42,7 @@ function TopViewLocations({bg_color}){
   };
 
   return(
-    <section id={topViewLocations.top_view_all_locations} style={{backgroundColor: bg_color}}>
+    <section id={topViewLocations.top_view_all_locations} style={{backgroundColor: bg_color, marginTop: marginTopOffset}}>
       <Link to="/locations" className={topViewLocations.btn}></Link>
       <motion.div
         className={topViewLocations.track}

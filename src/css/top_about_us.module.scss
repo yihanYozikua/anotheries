@@ -26,7 +26,7 @@ $top-get-in-touch-text-color: #383C47;
     z-index: 12;
     color: $top-get-in-touch-text-color;
     padding: 0 3rem;
-    
+    pointer-events: none;
   }
   .btn{
     color:#262626;
@@ -41,6 +41,7 @@ $top-get-in-touch-text-color: #383C47;
     height: $top-about-us-height;
     width: 100vw;
     margin: 0 -3rem;
+    pointer-events: stroke;
   }
 
   .btn:hover {

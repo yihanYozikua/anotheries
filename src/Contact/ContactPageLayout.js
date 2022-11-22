@@ -19,7 +19,7 @@ const ContactPageLayout = ({ children }) => {
       <Cursor cursorTypes={"Contact"} />
       {children}
       <TopAboutUs bg_color={BG_COLOR} />
-      <TopViewLocations bg_color={BG_COLOR} />
+      <TopViewLocations bg_color={BG_COLOR} marginTopOffset="0"/>
       <Footer bg_color={BG_COLOR} />
     </>
   )

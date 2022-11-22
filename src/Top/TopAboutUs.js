@@ -17,8 +17,8 @@ function TopAboutUs({bg_color, border_color}){
   // console.log(border_color)
   return(
     <section id={topAboutUs.top_about_us} style={{...bg_style, ...border_bottom_style, ...border_bottom_color}}>
-      <span className={topAboutUs.text_prop} data-aos="fade-in">About us</span>
       <Link to="/about" className={topAboutUs.btn} style={{...border_bottom_style, ...border_bottom_color}}> </Link>
+      <span className={topAboutUs.text_prop} data-aos="fade-in">About us</span>
       {/* <span className={topAboutUs.bgImg_prop}></span> */}
     </section>
   );

@@ -76,14 +76,14 @@ const LocationsType2 = ({ bannerImg, locationIndex, imgsAll, imgsToShow, title, 
             <motion.img src={bannerImg} style={{ objectPosition: coverImgPosition }} className={locationsTypeTwoCss.bannerImg_prop} />
           </div>
 
-          <div className={shareCss.information_container} data-aos="fade-in">
-            <div className={shareCss.information_left_container}>
-              <span className={shareCss.information_left_title_prop}>Our comments</span>
-            </div>
-            <div className={shareCss.information_right_container}>
-              <span className={shareCss.information_right_title_prop}>More about there</span>
-            </div>
-          </div>
+          {/*<div className={shareCss.information_container} data-aos="fade-in">*/}
+          {/*  <div className={shareCss.information_left_container}>*/}
+          {/*    <span className={shareCss.information_left_title_prop}>Our comments</span>*/}
+          {/*  </div>*/}
+          {/*  <div className={shareCss.information_right_container}>*/}
+          {/*    <span className={shareCss.information_right_title_prop}>More about there</span>*/}
+          {/*  </div>*/}
+          {/*</div>*/}
 
           <div className={shareCss.information_container} data-aos="fade-in">
             <div className={shareCss.information_left_contents_container}>

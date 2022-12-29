@@ -98,14 +98,14 @@ const LocationsType1 = ({ bannerImg, locationIndex, imgsAll, imgsToShow, title, 
             </div>
           </div>
 
-          <div className={shareCss.information_container} data-aos="fade-in">
-            <div className={shareCss.information_left_container}>
-              <span className={shareCss.information_left_title_prop}>Little tips</span>
-            </div>
-            <div className={shareCss.information_right_container}>
-              <span className={shareCss.information_right_title_prop}>More about there</span>
-            </div>
-          </div>
+          {/*<div className={shareCss.information_container} data-aos="fade-in">*/}
+          {/*  <div className={shareCss.information_left_container}>*/}
+          {/*    <span className={shareCss.information_left_title_prop}>Little tips</span>*/}
+          {/*  </div>*/}
+          {/*  <div className={shareCss.information_right_container}>*/}
+          {/*    <span className={shareCss.information_right_title_prop}>More about there</span>*/}
+          {/*  </div>*/}
+          {/*</div>*/}
 
           <div className={shareCss.information_container} data-aos="fade-in">
             <div className={shareCss.information_left_contents_container}>

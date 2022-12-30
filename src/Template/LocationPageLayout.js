@@ -7,12 +7,13 @@ import Temp from "../Temp"
 
 const BG_COLOR = "#F1EEE6";
 const BORDER_COLOR = "#B3B3BE";
+const WHITE = "white";
 
 const LocationPageLayout = ({ children, hasTopAboutUsBorder }) => {
   return (
     <PageLayout
       bgColor={BG_COLOR}
-      topBorderColor={hasTopAboutUsBorder ? BORDER_COLOR : ''}
+      topBorderColor={hasTopAboutUsBorder ? WHITE : ''}
     >
       <Temp />
       <Cursor />

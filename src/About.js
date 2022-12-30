@@ -187,11 +187,11 @@ export default class About extends React.Component{
                   <span className={aboutCss.count_for}>Years</span>
                 </div>
                 <div className={aboutCss.section_two_right_lists} data-aos="fade-in">
-                  <span className={aboutCss.num}>263</span>
+                  <span className={aboutCss.num}>20</span>
                   <span className={aboutCss.count_for}>Locations</span>
                 </div>
                 <div className={aboutCss.section_two_right_lists} data-aos="fade-in">
-                  <span className={aboutCss.num}>5</span>
+                  <span className={aboutCss.num}>3</span>
                   <span className={aboutCss.count_for}>Countries</span>
                 </div>
               </div>

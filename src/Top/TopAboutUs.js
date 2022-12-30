@@ -11,7 +11,7 @@ function TopAboutUs({bg_color, border_color}){
 
 
   const bg_style = {backgroundColor: bg_color};
-  const border_style_top = {borderTop: "1px solid #B3B3BE"};
+  // const border_style_top = {borderTop: "1px solid #B3B3BE"};
   const border_bottom_style = {borderBottomStyle: "1px dotted"}
   const border_bottom_color = {borderBottomColor: border_color}
   // console.log(border_color)

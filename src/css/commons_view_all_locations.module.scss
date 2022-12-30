@@ -1,0 +1,52 @@
+@import './main.scss';
+@import "@fontsource/zen-kaku-gothic-new";
+
+$view-all-locations-static-height: 24rem;
+
+#view_all_locations_static {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  background-color: #ECE2E4;
+  height: $view-all-locations-static-height;
+  font-family: 'Poppins', 'Lato', 'Yeseva One', 'Noto Sans JP', sans-serif, cursive !important;
+  font-weight: 500 !important;
+  font-style: italic;
+  font-size: 3rem;
+  border-bottom: 1px solid white;
+  padding: 0 3rem;
+
+  a {
+    width: 100vw;
+    height: $view-all-locations-static-height;
+  }
+
+  .text_prop {
+    z-index: 12;
+    color: $color-black;
+  }
+
+  .btn {
+    color: $color-black;
+    padding: .5em 1em;
+    font-size: 1em;
+    border-top: #fff 1px solid;
+    border-bottom: #fff 1px solid;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    z-index: 20;
+    height: $view-all-locations-static-height;
+    width: 100vw;
+    margin: 0 -3rem;
+  }
+
+  .btn:hover {
+    color: whitesmoke;
+  }
+
+  .btn:hover:before {
+    bottom: 0;
+  }
+}
+

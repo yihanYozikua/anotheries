@@ -29,7 +29,7 @@ function PrivacyPolicy(){
         
         <div className={privacyCss.description_section_container}>
           <h2>はじめに</h2>
-          <p>Untitledは（以下、「本サイト」）、各種サービスのご提供にあたり、お客様の個人情報をお預かりしております。本サイトは個人情報を保護し、お客様に更なる信頼性と安心感をご提供できるように努めて参ります。本サイトは、個人情報に関する法令を遵守し、個人情報の適切な取り扱いを実現致します。</p>
+          <p>Anotheriesは（以下、「本サイト」）、各種サービスのご提供にあたり、お客様の個人情報をお預かりしております。本サイトは個人情報を保護し、お客様に更なる信頼性と安心感をご提供できるように努めて参ります。本サイトは、個人情報に関する法令を遵守し、個人情報の適切な取り扱いを実現致します。</p>
         </div>
 
         <div className={privacyCss.description_section_container}>
@@ -70,7 +70,7 @@ function PrivacyPolicy(){
           <table>
             <tr>
               <td className={privacyCss.tableLabel}>名称</td>
-              <td className={privacyCss.tableContents}>Untitled運営チーム</td>
+              <td className={privacyCss.tableContents}>Anotheries運営チーム</td>
             </tr>
             <tr>
               <td className={privacyCss.tableLabel}>E-mail</td>

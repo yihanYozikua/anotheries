@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/anotheries/static/css/main.ed46ef95.css",
-    "main.js": "/anotheries/static/js/main.079e8391.js",
+    "main.css": "/anotheries/static/css/main.ae7dabc0.css",
+    "main.js": "/anotheries/static/js/main.bbc79444.js",
     "static/media/naraWakakusayamaNightview_2022_06_4.jpg": "/anotheries/static/media/naraWakakusayamaNightview_2022_06_4.f4589c329119f1d6cc63.jpg",
     "static/media/naraWakakusayamaNightview_2022_06_3.jpg": "/anotheries/static/media/naraWakakusayamaNightview_2022_06_3.9edc3d3625444ccad48f.jpg",
     "static/media/naraWakakusayamaNightview_2022_06_5.jpg": "/anotheries/static/media/naraWakakusayamaNightview_2022_06_5.382015d663b8347dc280.jpg",
@@ -268,11 +268,11 @@
     "static/media/cursor_left_right.svg": "/anotheries/static/media/cursor_left_right.f275222eaf3413d7cd7bcc066bf691eb.svg",
     "static/media/cursor_left_right_arrow_only.svg": "/anotheries/static/media/cursor_left_right_arrow_only.7bf760751cc4266702fe.svg",
     "static/media/cursor_double_circle_white.svg": "/anotheries/static/media/cursor_double_circle_white.b3757f741ce79f75dc994fcc3e3fecc6.svg",
-    "main.ed46ef95.css.map": "/anotheries/static/css/main.ed46ef95.css.map",
-    "main.079e8391.js.map": "/anotheries/static/js/main.079e8391.js.map"
+    "main.ae7dabc0.css.map": "/anotheries/static/css/main.ae7dabc0.css.map",
+    "main.bbc79444.js.map": "/anotheries/static/js/main.bbc79444.js.map"
   },
   "entrypoints": [
-    "static/css/main.ed46ef95.css",
-    "static/js/main.079e8391.js"
+    "static/css/main.ae7dabc0.css",
+    "static/js/main.bbc79444.js"
   ]
 }

@@ -1,15 +1,8 @@
-import React, { useState, useRef, useEffect } from "react";
-import { motion, useViewportScroll, useTransform, useScroll } from "framer-motion";
-import { Button } from 'react-bootstrap';
-import { Link, useNavigate, useLocation, useHistory } from 'react-router-dom';
-import AOS from 'aos';
+import React from "react";
 
 // import { images } from './image_data.ts'
-import { images } from '../image_compress.ts'
-import { images_random } from '../image_data_contact_thanks_easter_egg.ts'
-import { placeholderImgs } from '../image_placeholder.ts'
+import {images_random} from '../image_data_contact_thanks_easter_egg.ts'
 import contactThanksCss from '../css/contact_thanks.module.scss'
-import shareCss from '../css/share.module.scss'
 import ContactPageLayout from "./ContactPageLayout";
 import Navbar from "../components/Navbar";
 

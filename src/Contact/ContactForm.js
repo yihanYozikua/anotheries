@@ -1,16 +1,10 @@
-import React, { useState, useRef, useEffect } from "react";
-import { motion, useViewportScroll, useTransform, useScroll } from "framer-motion";
-import { Button } from 'react-bootstrap';
-import { MdKeyboardArrowDown } from 'react-icons/md';
-import { Link, useNavigate, useLocation, useHistory } from 'react-router-dom';
+import React, {useRef, useState} from "react";
+import {motion} from "framer-motion";
+import {Link, useLocation} from 'react-router-dom';
 import TextareaAutosize from 'react-textarea-autosize';
-import AOS from 'aos';
 
 // import { images } from './image_data.ts'
-import { images } from '../image_compress.ts'
-import { placeholderImgs } from '../image_placeholder.ts'
 import contactFormCss from '../css/contact_form.module.scss'
-import shareCss from '../css/share.module.scss'
 import arrow_right_short from '../static/arrow/arrow_right_short.svg'
 import arrow_down_short from '../static/arrow/arrow_down_short.svg'
 import arrow_right_double_check from '../static/arrow/arrow_right_contact_double_check.svg'

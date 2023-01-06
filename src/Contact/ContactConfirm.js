@@ -1,16 +1,11 @@
-import React, { useState, useRef, useEffect } from "react";
-import { motion, useViewportScroll, useTransform, useScroll } from "framer-motion";
-import { Button } from 'react-bootstrap';
-import { Link, useNavigate, useLocation, useHistory } from 'react-router-dom';
+import React, {useRef} from "react";
+import {motion} from "framer-motion";
+import {useLocation, useNavigate} from 'react-router-dom';
 import emailjs from '@emailjs/browser';
-import AOS from 'aos';
 
 // import { images } from './image_data.ts'
-import { images } from '../image_compress.ts'
-import { placeholderImgs } from '../image_placeholder.ts'
-import contactFormCss from '../css/contact_form.module.scss'
+import {images} from '../image_compress.ts'
 import contactConfirmCss from '../css/contact_confirm.module.scss'
-import shareCss from '../css/share.module.scss'
 import arrow_right_double_check from '../static/arrow/arrow_right_contact_double_check.svg'
 import ContactPageLayout from "./ContactPageLayout";
 import Navbar from "../components/Navbar";

@@ -100,6 +100,7 @@ a{
         @include sm() {
           width: 60%;
           overflow-x: scroll;
+          -webkit-overflow-scrolling: touch;
         }
       }
     }

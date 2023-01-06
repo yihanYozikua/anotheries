@@ -18,7 +18,7 @@ function Footer({ bg_color }) {
     <section id={footerCss.footer} style={{ backgroundColor: bg_color }}>
       <Navbar wrapperComponent="div" className={footerCss.bottom_nav_container} data-aos="fade-in" />
       <div className={footerCss.privacy_policy_container} data-aos="fade-in">
-        <span className={footerCss.privacy_policy_content} style={{ cursor: 'pointer' }} onClick={openPrivacyPolicyPage} alt='' src='https://www.google.com/'>Privacy policy</span>
+        <span className={footerCss.privacy_policy_content} style={{ cursor: 'pointer', textDecoration: 'underline' }} onClick={openPrivacyPolicyPage} alt='' src='https://www.google.com/'>Privacy policy</span>
         <span className={footerCss.privacy_policy_content}>Copyright © 2023 by Anotheries Team, All Rights Reserved</span>
       </div>
     </section >

@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/anotheries/static/css/main.3567ed28.css",
-    "main.js": "/anotheries/static/js/main.501832cd.js",
+    "main.css": "/anotheries/static/css/main.4ef3c950.css",
+    "main.js": "/anotheries/static/js/main.0f4f316d.js",
     "static/media/naraWakakusayamaNightview_2022_06_4.jpg": "/anotheries/static/media/naraWakakusayamaNightview_2022_06_4.f4589c329119f1d6cc63.jpg",
     "static/media/naraWakakusayamaNightview_2022_06_3.jpg": "/anotheries/static/media/naraWakakusayamaNightview_2022_06_3.9edc3d3625444ccad48f.jpg",
     "static/media/naraWakakusayamaNightview_2022_06_5.jpg": "/anotheries/static/media/naraWakakusayamaNightview_2022_06_5.382015d663b8347dc280.jpg",
@@ -262,17 +262,19 @@
     "static/media/zen-kaku-gothic-new-2-400-normal.woff2": "/anotheries/static/media/zen-kaku-gothic-new-2-400-normal.4fe28ead6ee162c72b07.woff2",
     "static/media/arrow_left_locations.svg": "/anotheries/static/media/arrow_left_locations.7261932558b6cb0b74a36ce97632be80.svg",
     "static/media/arrow_right_locations.svg": "/anotheries/static/media/arrow_right_locations.be8da254da7019abe12c2415e98f98dd.svg",
+    "static/media/arrow_left_contact_double_check.svg": "/anotheries/static/media/arrow_left_contact_double_check.37379fd9d83c94c1fab35d302d1acf6a.svg",
     "static/media/arrow_down_short.svg": "/anotheries/static/media/arrow_down_short.74d15b3000bbbedf382ae04ff2567cea.svg",
     "static/media/arrow_right_short.svg": "/anotheries/static/media/arrow_right_short.649d6f6ec0fee397ead2efc2f56f8d74.svg",
     "static/media/arrow_right_contact_double_check.svg": "/anotheries/static/media/arrow_right_contact_double_check.6ccdc7f32b2f956d7c201c54188b76cf.svg",
+    "static/media/download.svg": "/anotheries/static/media/download.52ce6e55e02f48f8c6fed65ef254b6a4.svg",
     "static/media/cursor_left_right.svg": "/anotheries/static/media/cursor_left_right.f275222eaf3413d7cd7bcc066bf691eb.svg",
     "static/media/cursor_left_right_arrow_only.svg": "/anotheries/static/media/cursor_left_right_arrow_only.7bf760751cc4266702fe.svg",
     "static/media/cursor_double_circle_white.svg": "/anotheries/static/media/cursor_double_circle_white.b3757f741ce79f75dc994fcc3e3fecc6.svg",
-    "main.3567ed28.css.map": "/anotheries/static/css/main.3567ed28.css.map",
-    "main.501832cd.js.map": "/anotheries/static/js/main.501832cd.js.map"
+    "main.4ef3c950.css.map": "/anotheries/static/css/main.4ef3c950.css.map",
+    "main.0f4f316d.js.map": "/anotheries/static/js/main.0f4f316d.js.map"
   },
   "entrypoints": [
-    "static/css/main.3567ed28.css",
-    "static/js/main.501832cd.js"
+    "static/css/main.4ef3c950.css",
+    "static/js/main.0f4f316d.js"
   ]
 }

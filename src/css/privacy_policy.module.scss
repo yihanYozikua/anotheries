@@ -64,6 +64,10 @@ $location-bg-color:#F1EEE6;
 
     Button{
       width: 30%;
+      &:hover{
+        background-color: white;
+        color: $color-black;
+      }
     }
   }
 }

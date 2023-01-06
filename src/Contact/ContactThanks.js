@@ -1,23 +1,24 @@
 import React from "react";
 
 // import { images } from './image_data.ts'
-import {images_random} from '../image_data_contact_thanks_easter_egg.ts'
 import contactThanksCss from '../css/contact_thanks.module.scss'
 import ContactPageLayout from "./ContactPageLayout";
 import Navbar from "../components/Navbar";
+import downloadIcon from '../static/arrow/download.svg'
+import arrow_right from '../static/arrow/arrow_right_contact_double_check.svg'
+import {Link, Navigate, useLocation} from "react-router-dom";
 
-function ContactThanks(){
-  const image_location = ["Grax Camping", "Shonan", "Yin Young Sea", "Nara Wakakusaya Night View", "99 Islands", "Atami"]
-  const image_date = ["2020.02", "2017.08", "2021.08", "2022.06", "2019.11", "2020.08"]
-  const index = Math.floor(Math.random() * (images_random.length - 1) + 1);
-  console.log("index: " + index);
-  // let img_easter_egg = images_random[Math.floor(Math.random()*images_random.length)];
+function ContactThanks() {
+  const location = useLocation();
+  if (!location.state) {
+    return <Navigate to="/contact" />
+  }
 
   return (
     <ContactPageLayout>
       <section id={contactThanksCss.contact_thanks}>
         <div className={contactThanksCss.contact_thanks_container}>
-          <Navbar data-aos="fade-in"/>
+          <Navbar data-aos="fade-in" />
 
           <div className={contactThanksCss.contact_thanks_title} data-aos="fade-in">
             <span>Thank you for the message!</span>
@@ -46,19 +47,34 @@ function ContactThanks(){
           </div>
 
           <div className={contactThanksCss.contact_thanks_img_area_container}>
-            <img src={images_random[index]} alt="" className={contactThanksCss.contact_thanks_img_prop} data-aos="fade-in"></img>
+            <img src={location.state.easteregImg} alt="" className={contactThanksCss.contact_thanks_img_prop} data-aos="fade-in"></img>
             <div className={contactThanksCss.contact_thanks_img_description_area} data-aos="fade-in">
-              <span className={contactThanksCss.contact_thanks_img_description_sep_prop}>{image_date[index]}</span>
-              <span className={contactThanksCss.contact_thanks_img_description_sep_prop}>{image_location[index]}</span>
+              <span
+                className={contactThanksCss.contact_thanks_img_description_sep_prop}>{location.state.imageLocation}</span>
+              <span
+                className={contactThanksCss.contact_thanks_img_description_sep_prop}>{location.state.imageDate}</span>
             </div>
+            {/*<a className={contactThanksCss.contact_thanks_img_download_button_container} onClick={(e) => download(e)}>*/}
+            <a className={contactThanksCss.contact_thanks_img_download_button_container} download="easter_egg.jpg" href={location.state.easteregImg}>
+              <img className={contactThanksCss.contact_thanks_img_download_button_prop} src={downloadIcon} />
+            </a>
           </div>
+
+          <Link to="/" className={contactThanksCss.back_to_top_button_container}>
+            <div className={contactThanksCss.back_to_top_button_title}>Back to top</div>
+            <img className={contactThanksCss.back_to_top_button_arrow} src={arrow_right} />
+          </Link>
 
           <div className={contactThanksCss.dialogue_container}>
             <div className={contactThanksCss.dialogue_container_up} data-aos="fade-in">
-              <div className={contactThanksCss.dialogue_container_up_prop}>テキストが入ります。コメントが入ります。テキストが入ります。コメントが入ります。</div>
+              <div
+                className={contactThanksCss.dialogue_container_up_prop}>テキストが入ります。コメントが入ります。テキストが入ります。コメントが入ります。
+              </div>
             </div>
             <div className={contactThanksCss.dialogue_container_down} data-aos="fade-in">
-              <div className={contactThanksCss.dialogue_container_down_prop}>テキストが入ります。コメントが入ります。テキストが入ります。コメントが入ります。</div>
+              <div
+                className={contactThanksCss.dialogue_container_down_prop}>テキストが入ります。コメントが入ります。テキストが入ります。コメントが入ります。
+              </div>
             </div>
           </div>
 

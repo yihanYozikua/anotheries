@@ -4,6 +4,8 @@ import {Link, useLocation} from 'react-router-dom';
 import TextareaAutosize from 'react-textarea-autosize';
 
 // import { images } from './image_data.ts'
+import {images} from '../image_compress.ts'
+import {images_random} from '../image_data_contact_thanks_easter_egg.ts'
 import contactFormCss from '../css/contact_form.module.scss'
 import arrow_right_short from '../static/arrow/arrow_right_short.svg'
 import arrow_down_short from '../static/arrow/arrow_down_short.svg'
@@ -29,6 +31,17 @@ function ContactForm() {
     );
   }
 
+  // ============ get the random easter egg img ============
+  const image_location = ["Grax Camping", "Shonan", "Yin Young Sea", "Nara Wakakusaya Night View", "99 Islands",
+                          "Atami"]
+  const image_date = ["2020.02", "2017.08", "2021.08", "2022.06", "2019.11", "2020.08"]
+  const index = Math.floor(Math.random() * (images_random.length - 1) + 1);
+  console.log("index: " + index);
+  const [easteregImgValue, setEasteregImg] = useState(`${images_random[index]}`);
+  const [imageLocationValue, setImageLocation] = useState(`${image_location[index]}`);
+  const [imageDateValue, setImageDateValue] = useState(`${image_date[index]}`)
+
+  // ============= set all elements in the form =============
   const [nameValue, setName] = useState('');
   const nameHandleChange = event => {
     setName(event.target.value);
@@ -56,6 +69,11 @@ function ContactForm() {
   }
 
   const location = useLocation();
+  document.addEventListener('contextmenu', function(event){
+    event.preventDefault();
+  })
+
+  const IMPORTANT_COLOR = '#BD3517';
 
   return (
     <ContactPageLayout>
@@ -65,7 +83,8 @@ function ContactForm() {
           <Navbar data-aos="fade-in" />
 
           <div className={contactFormCss.banner_container}>
-            <motion.img className={contactFormCss.banner_img} src={contact_banner_img} loading="lazy" data-aos="fade-in"></motion.img>
+            {/*<motion.img className={contactFormCss.banner_img} src={contact_banner_img} loading="lazy" data-aos="fade-in"></motion.img>*/}
+            <motion.img className={contactFormCss.banner_img} src={easteregImgValue} loading="lazy" data-aos="fade-in"></motion.img>
 
             <div className={contactFormCss.description_container}>
               <div className={contactFormCss.description_left}>
@@ -79,39 +98,45 @@ function ContactForm() {
                   <span>あなたからのご意見・ご質問を心待ちしております。</span>
                   <span>どうそお気軽に。</span>
                 </div>
+                <div className={contactFormCss.description_left_paragraph} data-aos="fade-in">
+                  <span><span style={{color:IMPORTANT_COLOR}}>※</span>は入力必須項目になります。</span>
+                </div>
 
                 <form id={contactFormCss.contactForm} ref={myRef}>
                   <div className={contactFormCss.input_form_element_container} data-aos="fade-in">
-                    <label htmlFor="fname">お名前</label>
+                    <label htmlFor="fname">お名前<span style={{color:IMPORTANT_COLOR}}>※</span></label>
                     <input type="text" id="fname" name="fname" placeholder="Name"
-                      onChange={nameHandleChange} value={nameValue} ></input>
+                           onChange={nameHandleChange} value={nameValue} ></input>
                   </div>
                   <div className={contactFormCss.input_form_element_container} data-aos="fade-in">
-                    <label htmlFor="fphone">ご連絡先</label>
+                    <label htmlFor="fphone">ご連絡先<span style={{color:IMPORTANT_COLOR}}>※</span></label>
                     <input type="text" id="fphone" name="fphone" placeholder="Phone number"
-                      onChange={phoneHandleChange} value={phoneValue}></input>
+                           onChange={phoneHandleChange} value={phoneValue}></input>
                   </div>
                   <div className={contactFormCss.input_form_element_container} data-aos="fade-in">
-                    <label htmlFor="femail">メール</label>
+                    <label htmlFor="femail">メール<span style={{color:IMPORTANT_COLOR}}>※</span></label>
                     <input type="text" id="femail" name="femail" placeholder="E-mail"
-                      onChange={emailHandleChange} value={emailValue}></input>
+                           onChange={emailHandleChange} value={emailValue}></input>
                   </div>
                   <div className={contactFormCss.input_form_element_container} data-aos="fade-in" style={{ marginBottom: '1rem' }}>
-                    <label htmlFor="fmessage">メッセージ</label>
+                    <label htmlFor="fmessage">メッセージ<span style={{color:IMPORTANT_COLOR}}>※</span></label>
                     <TextareaAutosize id="fmessage" name="fmessage" placeholder="Message"
-                      onChange={messageHandleChange} value={messageValue} />
+                                      onChange={messageHandleChange} value={messageValue} />
                   </div>
                   <div className={contactFormCss.input_form_element_container}>
                     <div className={contactFormCss.double_check_container} data-aos="fade-in">
                       <Link to="/contact_confirm" className={contactFormCss.double_check_prop}
-                        state={{
-                          name: nameValue,
-                          phone: phoneValue,
-                          email: emailValue,
-                          message: messageValue
-                        }}
-                        style={{pointerEvents: isDoubleCheckDisabled}}
-                        >Double check</Link>
+                            state={{
+                              easteregImg: easteregImgValue,
+                              imageLocation: imageLocationValue,
+                              imageDate: imageDateValue,
+                              name: nameValue,
+                              phone: phoneValue,
+                              email: emailValue,
+                              message: messageValue
+                            }}
+                            style={{pointerEvents: isDoubleCheckDisabled}}
+                      >Double check</Link>
                       <img src={arrow_right_double_check} alt="" className={contactFormCss.arrow_right_short_prop}></img>
                     </div>
                   </div>
@@ -122,7 +147,7 @@ function ContactForm() {
                 <div className={contactFormCss.description_sep_container} data-aos="fade-in">
                   <span className={contactFormCss.description_right_title}>メールでご連絡</span>
                   <div className={contactFormCss.description_right_button_container}>
-                    <Mailto email="chloe981219@gmail.com" subject="Greetings from {Please Enter Your Name Here}" body="Dear Untitled Creative Team,">chloe981219@gmail.com</Mailto>
+                    <Mailto email="chloe981219@gmail.com" subject="Greetings from {Please Enter Your Name Here}" body="Dear Anotheries Creative Team,">chloe981219@gmail.com</Mailto>
                     <img src={arrow_right_short} alt="" className={contactFormCss.arrow_right_short_prop}></img>
                   </div>
                 </div>

@@ -25,11 +25,11 @@ a{
   background-color: $contact-bg-color;
   color: $color-text;
   padding-top: 5rem;
-  
+
   .nav_items{
     @include buttonHoverEffect;
   }
-  
+
   .contact_container{
 
   }
@@ -56,7 +56,7 @@ a{
     justify-content: flex-start;
     align-items: center;
     margin-top: 4rem;
-    
+
     .form_blank_check_container{
       display: flex;
       flex-direction: row;
@@ -65,6 +65,16 @@ a{
       width: 50%;
       height: 15%;
       border-bottom: 1px solid $contact-input-color;
+      @include sm() {
+        width: 70%;
+        justify-content: space-between;
+      }
+      @include md() {
+        width: 50%;
+      }
+      @include lg() {
+        width: 50%;
+      }
 
       .form_label_prop{
         width: 20%;
@@ -73,6 +83,9 @@ a{
         justify-content: center;
         align-items: center;
         font-size: 0.8rem;
+        @include sm() {
+          width: 30%;
+        }
       }
       .form_value_prop{
         width: 80%;
@@ -83,6 +96,11 @@ a{
         font-size: 1.6rem;
         overflow-wrap: break-word;
         text-align: left;
+
+        @include sm() {
+          width: 60%;
+          overflow-x: scroll;
+        }
       }
     }
 
@@ -92,17 +110,22 @@ a{
       margin-top: 4rem;
       display: flex;
       flex-direction: row;
-      justify-content: center;
+      justify-content: space-evenly;
       align-items: center;
-      
+      .send_button_contents_container{
+        display: flex;
+        flex-direction: row;
+      }
+
       .send_button_prop{
+        font-family: $FONT-EN;
         display: flex !important;
         flex-direction: column !important;
         font-size: 2rem !important;
         color: $contact-input-color !important;
         text-decoration: underline !important;
-        margin-right: 1rem !important;
-        margin-left: 0 !important;
+        margin: 0 1rem;
+        font-weight: 400;
         &:hover{
           // cursor: pointer !important;
           color: rgb(97, 97, 97) !important;

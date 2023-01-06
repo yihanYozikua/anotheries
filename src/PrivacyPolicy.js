@@ -18,7 +18,7 @@ function PrivacyPolicy(){
   // const location = useLocation();
   return(
     <>
-      <Temp />
+      {/*<Temp />*/}
       <Cursor cursorTypes={"Privacy"} />
       <section id={privacyCss.privacy_policy}>
         {/* {location.state.date} */}

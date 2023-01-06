@@ -83,7 +83,7 @@ const LocationsType1 = ({ bannerImg, locationIndex, imgsAll, imgsToShow, title, 
             <span className={locationsTypeOneCss.index_prop}>{locationIndex}</span>
           </div>
 
-          <div className={locationsTypeOneCss.body_container} data-aos="fade-in">
+          <div className={locationsTypeOneCss.body_container}>
             <div className={locationsTypeOneCss.body_left_container}>
               <div className={locationsTypeOneCss.title_container}>
                 {titleRender}

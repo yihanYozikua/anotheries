@@ -71,7 +71,7 @@ function ContactForm() {
     if (phoneRegex.test(event.target.value)) {
       setErrorPhone(null)
     } else {
-      setErrorPhone('Please enter your phone number in correct format, Ex: 070-1234-5678')
+      setErrorPhone('下記フォーマットに沿ってご入力ください。例：070-1234-5678')
     }
   };
   const [emailValue, setEmail] = useState('');
@@ -83,7 +83,7 @@ function ContactForm() {
     if (emailRegex.test(event.target.value)) {
       setErrorEmail(null);
     } else {
-      setErrorEmail('Please enter your email in correct format, Ex: uesr123@example.com');
+      setErrorEmail('下記フォーマットに沿ってご入力ください。例：uesr123@example.com');
     }
   };
   const [messageValue, setMessage] = useState('');
@@ -93,7 +93,7 @@ function ContactForm() {
 
   let isDoubleCheckDisabled = 'none';
   let formFinish = false;
-  if (nameValue && phoneValue && emailValue && messageValue) {
+  if (nameValue && phoneValue && emailValue && messageValue && !errorEmail && !errorPhone) {
     formFinish = true;
     isDoubleCheckDisabled = 'unset';
   }
@@ -107,6 +107,11 @@ function ContactForm() {
   useEffect(() => {
     document.getElementsByClassName(`${contactFormCss.double_check_container}`).item(0).addEventListener(
       'click', () => {
+        if (errorPhone) {
+          document.getElementById('fphone_label').scrollIntoView();
+        } else if (errorEmail) {
+          document.getElementById('femail_label').scrollIntoView();
+        }
         for (var i = 0; i < columnsToFill.length; i++) {
           if (!document.getElementById(columnsToFill[i]).value) {
             document.getElementsByClassName(`${contactFormCss.hint_container}`).item(i).style.display = 'flex';
@@ -115,7 +120,7 @@ function ContactForm() {
           }
         }
       })
-  }, [])
+  }, [errorPhone, errorEmail])
   useEffect(() => {
     const detectHint = [
       document.getElementById('fname'),
@@ -176,7 +181,8 @@ function ContactForm() {
                     </div>
                   </div>
                   <div className={contactFormCss.input_form_element_container} data-aos="fade-in">
-                    <label htmlFor="fphone">ご連絡先<span style={{color: IMPORTANT_COLOR}}>※ {errorPhone}</span></label>
+                    <label id="fphone_label" htmlFor="fphone">ご連絡先<span
+                      style={{color: IMPORTANT_COLOR}}>※ {errorPhone}</span></label>
                     <input type="text" id="fphone" name="fphone" placeholder="Phone number"
                            onChange={phoneHandleChange} value={phoneValue}></input>
                     <div className={contactFormCss.hint_container}>
@@ -185,7 +191,7 @@ function ContactForm() {
                     </div>
                   </div>
                   <div className={contactFormCss.input_form_element_container} data-aos="fade-in">
-                    <label htmlFor="femail">メール<span
+                    <label id={"femail_label"} htmlFor="femail">メール<span
                       style={{color: IMPORTANT_COLOR}}>※ {errorEmail}</span></label>
                     <input type="text" id="femail" name="femail" placeholder="E-mail"
                       // pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"

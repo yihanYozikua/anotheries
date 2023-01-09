@@ -1,6 +1,6 @@
 import React, {useEffect, useRef, useState} from "react";
 import {motion} from "framer-motion";
-import {useLocation, useNavigate, Redirect, Navigate} from 'react-router-dom';
+import {useLocation, useNavigate, Redirect, Navigate, Link} from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 
 // import { images } from './image_data.ts'
@@ -106,7 +106,17 @@ function ContactConfirm() {
               <span className={contactConfirmCss.send_button_contents_container}>
                 <img src={arrow_left_double_check} alt="" className={contactConfirmCss.arrow_right_short_prop}
                      style={{width: '2.8rem'}}></img>
-                <a onClick={() => navigate(-1)} className={contactConfirmCss.send_button_prop}>Back</a>
+                <Link to="/contact" className={contactConfirmCss.send_button_prop}
+                      state={{
+                        easteregImg_: location.state.easteregImg,
+                        imageLocation_: location.state.imageLocation,
+                        imageDate_: location.state.imageDate,
+                        name_: location.state.name,
+                        phone_: location.state.phone,
+                        email_: location.state.email,
+                        message_: location.state.message
+                      }}
+                >Back</Link>
                 {/*<input type="submit" value="Back" className={contactConfirmCss.send_button_prop} />*/}
               </span>
               <span className={contactConfirmCss.send_button_contents_container}>

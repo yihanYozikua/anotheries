@@ -1,12 +1,15 @@
 import React from "react";
 
 // import { images } from './image_data.ts'
+import {images_random} from '../image_data_contact_thanks_easter_egg.ts'
 import contactThanksCss from '../css/contact_thanks.module.scss'
 import ContactPageLayout from "./ContactPageLayout";
 import Navbar from "../components/Navbar";
 import downloadIcon from '../static/arrow/download.svg'
 import arrow_right from '../static/arrow/arrow_right_contact_double_check.svg'
-import {Link, Navigate, useLocation} from "react-router-dom";
+import {Link, useLocation, useNavigate, Navigate} from "react-router-dom";
+import { saveAs } from 'file-saver'
+import {images} from "../image_compress.ts";
 
 function ContactThanks() {
   const location = useLocation();

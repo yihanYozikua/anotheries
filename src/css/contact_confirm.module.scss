@@ -65,6 +65,8 @@ a{
       width: 50%;
       height: 15%;
       border-bottom: 1px solid $contact-input-color;
+      overflow-x: scroll;
+      -webkit-overflow-scrolling: touch;
       @include sm() {
         width: 70%;
         justify-content: space-between;
@@ -96,11 +98,15 @@ a{
         font-size: 1.6rem;
         overflow-wrap: break-word;
         text-align: left;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+        -webkit-transform: translateZ(0);
 
         @include sm() {
           width: 60%;
           overflow-x: scroll;
           -webkit-overflow-scrolling: touch;
+          -webkit-transform: translateZ(0);
         }
       }
     }

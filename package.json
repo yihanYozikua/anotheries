@@ -54,6 +54,7 @@
   },
   "devDependencies": {
     "bootstrap": "^5.2.0",
+    "file-saver": "^2.0.5",
     "framer-motion": "^6.5.1",
     "gh-pages": "^4.0.0",
     "jquery": "^3.6.0",

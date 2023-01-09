@@ -67,7 +67,7 @@ function ContactForm() {
   const phoneHandleChange = event => {
     setPhone(event.target.value);
     //========== check if validated =========
-    const phoneRegex = /^\d{3}-\d{4}-\d{4}$/;
+    const phoneRegex = /[0-9]/;
     if (phoneRegex.test(event.target.value)) {
       setErrorPhone(null)
     } else {

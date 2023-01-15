@@ -11,14 +11,17 @@ const WHITE = "white";
 
 const LocationPageLayout = ({ children, hasTopAboutUsBorder }) => {
   return (
-    <PageLayout
-      bgColor={BG_COLOR}
-      topBorderColor={hasTopAboutUsBorder ? WHITE : ''}
-    >
-      <Temp />
-      <Cursor />
-      {children}
-    </PageLayout>
+    <>
+      <Cursor cursorTypes={"Locations"} />
+      <PageLayout
+        bgColor={BG_COLOR}
+        topBorderColor={hasTopAboutUsBorder ? WHITE : ''}
+      >
+        <Temp />
+        <Cursor />
+        {children}
+      </PageLayout>
+    </>
   )
 }
 

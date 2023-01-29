@@ -16,6 +16,8 @@ import cursorViewCircle from './static/cursor/cursor_view_circle.svg'
 import cursorArrow from './static/cursor/cursor_left_right.svg'
 // import { CgArrowsH } from 'react-icons/md'
 import { MdKeyboardArrowDown } from 'react-icons/md';
+import locationsTypeFiveCss from "./css/locations_type5.module.scss";
+import locationsTypeSixCss from "./css/locations_type6.module.scss"
 
 // export default class Cursor extends React.Component{
 function Cursor (cursorTypes){
@@ -99,6 +101,12 @@ function Cursor (cursorTypes){
 
       var imgGallery = document.getElementsByClassName(`${ImgGalleryCss.img_container}`);
       cursorLeftRight(imgGallery, `${cursorCss.cursor_hover_view}`, `${cursorCss.cursor_hover_inner_view}`);
+
+      var imgReelFive = document.getElementsByClassName(`${locationsTypeFiveCss.img_reel_container}`);
+      cursorLeftRight(imgReelFive, `${cursorCss.cursor_hover_left_right_arrow}`, `${cursorCss.cursor_hover_inner_left_right_arrow}`);
+
+      var imgReelSix = document.getElementsByClassName(`${locationsTypeSixCss.img_reel_container}`);
+      cursorLeftRight(imgReelSix, `${cursorCss.cursor_hover_left_right_arrow}`, `${cursorCss.cursor_hover_inner_left_right_arrow}`);
     }
     else if(cursorTypes.cursorTypes == "Contact"){
       let viewAllLocations = document.getElementsByClassName(`${topViewLocations.btn}`);

@@ -23,9 +23,7 @@ export default function TopImgReel(props) {
   // =============== infinite scroll ===============
   useEffect(() => {
     $(`#${topImgCss.topScroll}`).on('scroll', function (event) {
-      // BUG: don't select use className__hash, it may auto change in future build. Use useRef instead.
       var factor = this.scrollLeft / (this.scrollWidth - $(this).width());
-      // console.log(factor);
       if (factor < 0.2) {
         var move = $(this.lastChild);
         move.remove();
@@ -243,7 +241,8 @@ export default function TopImgReel(props) {
   }, []);
 
   useEffect(() => {
-    document.getElementById(`${topImgCss.topScroll}`).scrollLeft = 83;
+    document.getElementById(`${topImgCss.topScroll}`).scrollLeft = 190;
+
   }, []);
 
   const imgReelInfo = [

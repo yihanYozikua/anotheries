@@ -241,7 +241,7 @@ export default function TopImgReel(props) {
   }, []);
 
   useEffect(() => {
-    document.getElementById(`${topImgCss.topScroll}`).scrollLeft = 190;
+    document.getElementById(`${topImgCss.topScroll}`).scrollLeft = 175;
 
   }, []);
 

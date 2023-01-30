@@ -21,20 +21,32 @@ import locationsTypeSixCss from "./css/locations_type6.module.scss"
 
 // export default class Cursor extends React.Component{
 function Cursor (cursorTypes){
+  const [width, setWidth] = useState(window.innerWidth);
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+  useEffect(() => {
+    window.addEventListener('resize', handleWindowSizeChange);
+    return () => {
+      window.removeEventListener('resize', handleWindowSizeChange);
+    }
+  }, []);
+  const isMobile = width <= 768;
+  const isPad = (width > 768) && (width <= 992);
+
   useEffect(() => {
     console.log(`cursorTypes: ${cursorTypes.cursorTypes}`);
     var cursor = document.getElementById(`${cursorCss.cursor}`);
     var cursorinner = document.getElementById(`${cursorCss.cursor2}`);
     var a = document.querySelectorAll('a');
     document.addEventListener('mousemove', function(e){
+      if(!isMobile && !isPad){
+        cursor.style.display = 'unset';
+        cursorinner.style.display = 'unset';
+      }
       var x = e.clientX;
       var y = e.clientY;
       cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
-    });
-
-    document.addEventListener('mousemove', function(e){
-      var x = e.clientX;
-      var y = e.clientY;
       cursorinner.style.left = x + 'px';
       cursorinner.style.top = y + 'px';
     });
